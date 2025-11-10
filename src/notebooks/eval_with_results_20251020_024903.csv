@@ -1,0 +1,105 @@
+id,category,query,answer,section_key,gen_answer,"Clareza
+1 - 5","Precisão
+1 - 5","Utilidade
+1 - 5"
+Q01,Comandos/Parâmetros,Qual o comando para reiniciar o dispositivo via envio de comandos?,Use o comando 'Reboot' (reinicia o dispositivo).,20.envio de comandos,"**Resposta Técnica:**
+
+O comando para reiniciar o dispositivo é **Reboot**.
+
+**Fonte:** [5] Reset: Reinicia o dispositivo; Reboot: Reinicia o dispositivo.",,,
+Q02,Comandos/Parâmetros,Qual o comando para habilitar a Saída 1?,Use o comando 'Enable1' (ativa a Saída 1).,20.envio de comandos,"Para habilitar a Saída 1, você pode utilizar o comando ""Desabilitada: Desabilita a saída"" [1].",,,
+Q03,Comandos/Parâmetros,Como consultar a versão do firmware do rastreador por comando?,Envie 'ReqVer' com Option=1 para solicitar a versão do firmware.,20.envio de comandos,"Para consultar a versão do firmware do rastreador por comando, você pode utilizar o comando `CMD;1610009909;03;01`. Isso retorna a versão do firmware do rastreador.
+
+Fonte: [8]",,,
+Q04,Comandos/Parâmetros,Como iniciar a calibração DPA por comando?,Use 'Start DPA Calibration' para iniciar e 'Stop DPA Calibration' para finalizar.,20.envio de comandos,"Para iniciar a calibração DPA por comando, envie o comando: **Start DPA Calibration**.",,,
+Q05,Comandos/Parâmetros,Existe comando para consultar o status do antifurto?,Sim. Utilize 'Get anti theft status' para consultar o status do serviço de antifurto.,20.envio de comandos,"Sim, existe um comando para consultar o status do antifurto. O comando é: ""Get anti theft status"".",,,
+Q06,Configurações de interface,Como habilitar o Fine Tracking no ST4305?,Parâmetro (3010) — Habilitar Fine Tracking: 01 = Enable (ativado); 00 = Disable (desativado).,27.configurando fine tracking,"Para habilitar o Fine Tracking no ST4305, é necessário acessar o menu Fine Tracking do Synctrak e executar a configuração.
+
+[2] 10. PARÂMETRO DE SMS 10. 1. ST8300 / ST4305 Número do SMS (1025): Configura o número de telefone que receberá o SMS do rastreador
+
+Observação: Para utilizar a função Fine Tracking, é necessário que o envio de posições esteja configurado em 60 segundos (1min).
+
+Fonte: [CONTEXTO]",,,
+Q07,Configurações de interface,Qual parâmetro define o intervalo entre posições GPS no Fine Tracking?,Parâmetro (3011) — Intervalo de posições GPS em segundos (valores de 1 a 5; recomendado 1 s).,27.configurando fine tracking,"O parâmetro que define o intervalo entre posições GPS no Fine Tracking é o ""Intervalo posições GPS [s] (3011)"".
+
+Fonte: [CONTEXTO]
+
+Resposta técnica: O valor padrão recomendado para este parâmetro é 5.",,,
+Q08,Configurações de interface,Como definir a quantidade de posições enviadas por relatório no Fine Tracking?,Parâmetro (3012) — Quantidade de posições por FTR (valores de 5 a 10; padrão recomendado: 5).,27.configurando fine tracking,"Para definir a quantidade de posições enviadas por relatório no Fine Tracking, você pode configurar o valor ""Quantidade posições GPS para enviar FTR (fine tracking)"" (3012). Esse valor pode ser definido entre 5 e 10. O padrão recomendado é 5.
+
+Fonte: [CONTEXTO]",,,
+Q09,Configurações de interface,Quais campos podem ser habilitados no cabeçalho STT (Small Table)?,"No modo Small Table, é possível habilitar campos como: Bateria de backup, Odometria, etc., conforme a tabela do manual.",24.configuração de cabeçalhos (stt e alt),"De acordo com o CONTEXTO, os campos que podem ser habilitados no cabeçalho STT (Small Table) são:
+
+1. Bateria backup (1)
+2. Tensão da bateria principal (2)
+3. Temperaturas do sensor (3 a 10)
+4. Dados dos eixos acelerômetros X, Y, Z (11 a 13)
+5. Altitude (19)
+6. Status da conexão (20)
+7. Tecnologia de comunicação utilizada 2G ou 4G (80)
+8. TA (81) timing advance
+
+Fonte: [24. 1. CABEÇALHO DE POSIÇÃO (STT)]",,,
+Q10,Configurações de interface,Como configurar a APN de dados (parâmetros de rede)?,"Na seção de Parâmetro de Rede, configure APN, usuário e senha conforme a operadora.",7.parâmetro de rede,"Para configurar a APN de dados (parâmetros de rede), você pode seguir os passos apresentados no contexto:
+
+APN (1001), usuário (1002) e senha (1003): Configuração referente à comunicação GPRS
+
+Essa configuração é relacionada à comunicação GPRS, portanto, para configurar a APN de dados, você precisará fornecer os parâmetros de rede corretos.
+
+**Fonte:** [1054]
+
+**Nota:** Relacionado no contexto: APN (1001), usuário (1002) e senha (1003).",,,
+Q11,Procedimentos gerais,Como configurar ou desabilitar a senha de acesso no Synctrak?,Use a seção 'Configurando Senha' para criar/alterar/desabilitar a senha de acesso às configurações.,26.configurando senha,"Para configurar ou desabilitar a senha de acesso no Synctrak, siga os passos abaixo:
+
+1. Acesse o menu Change Password e selecione a opção: Habilitar.
+2. Digite a senha atual no campo Current Password (senha atual) [3001].
+3. Preencha a senha desejada em New Password (nova senha) [3002] e clique em Enviar.
+
+Para desabilitar a função de criptografia, selecione a opção: Desabilitar, digite a senha atual no campo Current Password (senha atual), e depois clique em Enviar. A função será desativada e não solicitará a senha ao conectar no configurador.
+
+Lembre-se de que a senha deve conter no mínimo 6 dígitos e no máximo 18 dígitos [1].",,,
+Q12,Procedimentos gerais,Como adicionar o ID do motorista usando 1-Wire?,Utilize o procedimento 'Adicionar ID do motorista' (1-Wire) para registrar novos IDs.,29.adicionar id do motorista,"Para adicionar o ID do motorista usando 1-Wire, é necessário configurar o dispositivo para ter o leitor iButton DS9092+ ou compatível conectado à linha 1-Wire. Isso pode ser feito com a configuração [01] = ID do motorista (iButton) Configuração: O dispositivo será configurado para ter o leitor iButton DS9092+ ou compatível conectado à linha 1-Wire, como mencionado no contexto.
+
+**Fonte:** [4]
+
+**Observação:** Lembre-se de que o ID de Motorista Mestre utilizado para adicionar IDs de Motorista não pode ser o mesmo utilizado para remover IDs de Motorista.",,,
+Q13,Procedimentos gerais,Como remover um ID do motorista previamente cadastrado?,Siga o procedimento de 'Remover ID do motorista' para excluir o ID desejado.,30.remover id do motorista,"Para remover um ID de Motorista previamente registrado, é necessário seguir o procedimento descrito no contexto:
+
+[1] 30. REMOVER ID DO MOTORISTA    Posição: Escolha da posição de ID de Motorista armazenado previamente no equipamento a ser removido
+
+Isso significa que você precisa escolher a posição do ID de Motorista previamente registrado no equipamento e seguir o procedimento para remover esse ID.",,,
+Q14,Procedimentos gerais,Como ler (identificar) o ID do motorista presente no veículo?,Execute o procedimento 'Ler ID do motorista' para visualizar o ID capturado.,31.ler id do motorista,"Para ler (identificar) o ID do motorista presente no veículo, você pode seguir os seguintes passos:
+
+1. Acesse a posição ""31. LER ID DO MOTORISTA"" ([1]) e escolha a posição de ID de Motorista armazenada no equipamento a ser enviado.
+2. Insira o ID de Motorista no leitor (conexão 1-Wire) dentro do timeout configurado para ligar ignição (1972).
+
+Lembre-se de que o ID do motorista pode ser encriptado quando um comando é enviado por SMS.
+
+**Fonte:** [1]",,,
+Q15,Procedimentos gerais,Onde verificar o status do GPS/WWAN e do cartão SIM para diagnóstico?,"Use a seção 'Diagnóstico' para visualizar status de GPS, WWAN, rede e presença do SIM.",21.diagnóstico,"Para verificar o status do GPS, WWAN e do cartão SIM para diagnóstico, você pode utilizar os seguintes comandos:
+
+* 21. DIAGNÓSTICO: Apresenta os status dos módulos GPS e WWAN do dispositivo [1]
+* ReqICCID: Solicita o ICCID do SimCard
+* Get anti theft status: Consulta o status do serviço de antifurto
+
+Esses comandos permitem verificar o estado do GPS (Fixo, não fixo ou erro), WWAN (OK, Erro de comunicação server, Erro de comunicação GPRS, Serviço Limitado, sem rede ou Não SIM) e do cartão SIM.
+
+Relacionado no contexto: [1]",,,
+Q16,Especificações e certificações,Quais bandas de 2G e LTE são suportadas pelo ST4305/ST8300?,"2G (GPRS): 850/900/1800/1900 MHz. ST4305: LTE Cat M1/NB-IoT (Bandas típicas: 1, 3, 5, 28). ST8300: vide especificação correspondente no manual.",1.especificações técnicas,"Segundo o contexto, as bandas suportadas pelo ST4305 (LTE Cat M1/NB-IoT) e ST8300 (LTE Cat 1) são:
+
+* Para o ST4305: Bandas 1 [2100MHz], 3 [1800MHz], 5 [850MHz] e 28 [700MHz]
+* Para o ST8300: Bandas 1 [2100MHz], 3 [1800MHz], 5 [850MHz], 7 [2600MHz] e 28 [700MHz]
+
+Portanto, as bandas de 2G suportadas são a banda GSM (não especificada qual é), e as bandas LTE suportadas são as mencionadas acima.",,,
+Q17,Especificações e certificações,Qual é a faixa de temperatura de operação do equipamento?,Temperatura de operação típica: -30 °C a +80 °C (ver seção de especificações).,1.especificações técnicas,"A resposta técnica para essa pergunta é:
+
+Não encontrado no contexto.
+
+O CONTEXTO não menciona especificamente a faixa de temperatura de operação do equipamento. No entanto, é mencionado o Sensor 1-Wire – I-Button ou Sensor de Temperatura, que pode estar relacionado à temperatura, mas não há informações específicas sobre a faixa de temperatura de operação.",,,
+Q18,Especificações e certificações,Qual é a tensão de alimentação principal suportada?,Tensão de operação típica: 12 V (com perfis e proteções descritas nos parâmetros de tensão).,12.parâmetros de tensão,"A tensão de alimentação principal suportada é 12V ou 24V, como mencionado no contexto: ""Tensão que decide se a bateria é 12V ou 24V (1933): Tensão (em Volts) que o módulo entenderá que a alimentação principal é 12v / 24V"".",,,
+Q19,Especificações e certificações,Qual a capacidade de memória FIFO de posições?,Capacidade de memória: cerca de 10.000 posições FIFO (conforme especificação).,1.especificações técnicas,Capacidade de memória: 10000 posições FIFO. [1],,,
+Q20,Especificações e certificações,O produto é homologado por algum órgão regulatório?,Sim. O manual informa homologação pela Anatel (ver especificações).,1.especificações técnicas,"**Resposta técnica:**
+
+O CONTEXTO não menciona a homologação do produto por algum órgão regulatório. Portanto, **não encontrado no contexto**.
+
+**Relacionado no contexto:** Nenhuma informação sobre homologação é fornecida no CONTEXTO.",,,

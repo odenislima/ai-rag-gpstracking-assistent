@@ -1,0 +1,12 @@
+18. CERCA POLIGONAL
+
+| Parâmetro | Descrição |
+| ID da cerca | É o número que identifica a cerca 1 a 30 |
+| Alerta de entrada da cerca | Habilita ou desabilitada o alerta |
+| Alerta de saída da cerca | Habilita ou desabilitada o alerta |
+| Limite de velocidade na cerca | Configura o limite de velocidade em KM/h dentro da cerca, ao habilitar e configurar o limite, o equipamento  enviará  um  alerta  de  velocidade  excedida  e normalizada  a  plataforma  de  monitoramento.  Caso  tenha  alguma  saída  configurada  como buzzer um alerta sonoro também será emitido.Após realizar as configurações desejadas, clique em Próximo.|
+| Delay Limite de Velocidade | É  o  tempo para considerar que está de fato acima do limite de velocidade. |
+
+Com botão esquerdo do mouse, selecione a região e desenhe a cerca poligonal desejada, após finalizar a seleção dos pontos clique em Enviar, a cerca poligonal será configurada e gravada no equipamento
+
+As cercas poligonais também são salvas no arquivo de configuração. Este arquivo poderá ser carregado em outros equipamentos 4G.

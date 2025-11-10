@@ -1,0 +1,7 @@
+5. SINALIZAÇÃO DOS LEDS
+
+5.1. LED VERMELHO – Indicador de GPS
+| Estado do GPS | Piscadas | Diagnóstico |
+| Normal| 1| `__[]_______`GPS fixado com precisão; rastreamento operacional. |
+| Sem sinal GPS | 2        | `__[]__[]_______`Possíveis causas:1 - Parâmetros de rede incorretos;2 - Servidor inacessível;3 - Obstrução do sinal (ex: ambientes internos, túneis, garagens). |
+| Erro no chipset / antena | 4 | `__[]__[]__[]__[]_______`Possíveis causas:1 - GPS tentando fixar posição sem sucesso;2 - Antena GPS interna mal conectada ou danificada;3 - Sinal GPS fraco ou interferência externa significativa. |

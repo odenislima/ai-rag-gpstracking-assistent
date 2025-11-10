@@ -1,0 +1,41 @@
+name: gps-rag-assistent
+channels:
+  - nvidia         # CUDA runtime para PyTorch
+  - pytorch        # builds oficiais do PyTorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy=1.26.4              # numpy < 2 para evitar quebras
+  - scikit-learn
+  - pytesseract
+  - pillow
+  - pymupdf                   # PyMuPDF
+  - pdf2image
+  - faiss-gpu=1.9.*
+  - pytorch                   # será pareado com CUDA 12.4 pelo metapacote abaixo
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.4         # requer driver compatível
+  - fastapi
+  - requests
+  - pytest
+  - regex
+  - ipykernel                 # facilitar kernel do Jupyter para este env
+  - pip
+  - pip:
+      - "transformers>=4.36,<5"     # evitar v5.x (quebra PreTrainedModel)
+      - "FlagEmbedding>=1.2.10"     # BGEM3
+      - "accelerate>=0.21"
+      - safetensors
+      - sentencepiece
+      - "einops>=0.6.0"
+      - sentence-transformers
+      - tqdm
+      - matplotlib
+      - unidecode
+      - tiktoken
+      - bert-score
+      - "uvicorn[standard]"          # uvicorn + uvloop/httptools/websockets/watchfiles
+      - rank-bm25

@@ -1,0 +1,53 @@
+4.1. ST8300 / ST4305
+
+Chicote principal (até 10 vias) | ST8300 / ST4305
+
+| Cor do fio | Função                                            |
+| Vermelho   | Positivo (+) – Alimentação de 8 a 33 Vcc          |
+| Preto      | Negativo (GND)                                    |
+| Azul       | Ignição – Entrada configurável (8 a 33 Vcc)       |
+| Branco     | Entrada 1 – Acionada por GND                      |
+| Amarelo    | Sensor 1-Wire – I-Button ou Sensor de Temperatura |
+| Verde      | Entrada 3 – Analógica (0 a 30V)                   |
+| Cinza      | Entrada 4 – Digital (GND)                         |
+| Laranja    | Saída 1 – Digital (GND), corrente máxima 300mA    |
+| Marrom     | Saída 2 – Digital (GND), corrente máxima 300mA    |
+| Roxo       | Saída 3 – Digital (GND), corrente máxima 300mA    |
+
+Chicote RS232 (4 vias) | ST8300 / ST4305
+
+| Cor do fio | Função                                         |
+| Branco     | RS232 RX – Recepção de dados                   |
+| Verde      | RS232 TX – Transmissão de dados                |
+| Preto      | Terra (GND)                                    |
+| Marrom     | Alimentação 4,5V para periféricos (máx. 200mA) |
+
+4.2. ST8300R
+
+Chicote principal (até 10 vias) | ST8300R
+
+| Cor do fio | Função                                            |
+| Vermelho   | Positivo (+) – Alimentação de 8 a 33 Vcc          |
+| Preto      | Negativo (GND)                                    |
+| Azul       | Ignição – Entrada configurável (8 a 33 Vcc)       |
+| Branco     | Entrada 1 – Acionada por GND                      |
+| Amarelo    | Sensor 1-Wire – I-Button ou Sensor de Temperatura |
+| Verde      | Entrada 3 – Analógica (0 a 30V)                   |
+| Cinza      | RS232 TX – Transmissão serial                     |
+| Laranja    | Saída 1 – Digital (GND), corrente máxima 300mA    |
+| Marrom     | Saída 2 – Digital (GND), corrente máxima 300mA    |
+| Roxo       | RS232 RX – Recepção serial                        |
+
+Chicote de Áudio (4 vias) | ST8300R
+
+| Cor do fio | Função      |
+| Branco     | Microfone   |
+| Verde      | Speaker +   |
+| Preto      | Terra (GND) |
+| Marrom     | Speaker –   |
+
+Observações
+
+- O fio azul pode ser configurado para detecção de ignição física.  
+  Esta funcionalidade deve ser habilitada no software de configuração do rastreador.
+  

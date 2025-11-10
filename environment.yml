@@ -1,0 +1,67 @@
+name: st4305rag
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Core Python
+  - python=3.10
+  - pip
+  - setuptools
+  - wheel
+
+  # Deep learning (GPU, CUDA 12.1)
+  - pytorch=2.6.*
+  - pytorch-cuda=12.1
+  - torchvision
+  - torchaudio
+
+  # Core ML / Transformers stack
+  - transformers>=4.45,<5
+  - accelerate>=0.33
+  - safetensors
+  - sentencepiece
+  - tokenizers
+  - numpy
+  - scipy
+  - pandas
+
+  # FlagEmbedding ecosystem
+  - pip:
+      - FlagEmbedding==1.3.5
+      - peft>=0.17
+      - ir-datasets
+      - fsspec
+      - xxhash
+      - multiprocess
+      - tqdm
+      - datasets[streaming]
+      - python-xxhash
+      - pyyaml
+
+  # FAISS + RAG pipeline
+  - faiss-gpu
+  - rank-bm25
+  - scikit-learn
+  - nltk
+  - spacy
+  - lxml
+
+  # Web API
+  - fastapi
+  - uvicorn
+  - pydantic
+  - orjson
+
+  # Utilities
+  - psutil
+  - sympy
+  - requests
+  - gzip
+  - jsonlines
+
+  # (Optional) Dev tools
+  - pytest
+  - jupyterlab

@@ -1,0 +1,18 @@
+5.2 - LED AZUL – Indicador de GPRS / LTE Cat M1
+
+| Estado de Conexão GPRS/LTE                  | Piscadas | Diagnóstico|
+| Normal                                      | 1        | `__[]_______`Conexão com rede de dados estabelecida com sucesso. |
+| Erro no servidor                            | 2        | `__[]__[]_______`Possíveis causas:1 - Configuração incorreta do IP ou porta do servidor;2 - Servidor offline;3 - Instabilidade temporária da rede. |
+| Erro de comunicação(GPRS ou CAT-M1) | 3     | `__[]__[]__[]_______`Possíveis causas:1 - SIM bloqueado;2 - Configuração APN incorreta;3 - Sinal fraco de rede celular. |
+| Sem rede GPRS                               | 4        | `__[]__[]__[]__[]_______`Possíveis causas:1 - Antena de rede mal conectada;2 - Falha no módulo de rede;3 - Cobertura de rede inexistente. |
+| PIN bloqueado                               | 5        | `__[]__[]__[]__[]__[]_______`Possíveis causas:1 - SIM card exige desbloqueio via PIN;2 - Código PIN incorreto configurado no rastreador. |
+| Sem conexão com rede                        | 6        | `__[]__[]__[]__[]__[]__[]_______`Possíveis causas:1 - Cobertura fraca de GPRS/LTE CAT M1;2 - Problemas com a operadora celular. |
+| Sem SIM card                                | 7        | `__[]__[]__[]__[]__[]__[]__[]_______`Possíveis causas:1 - SIM ausente ou mal encaixado;2 - Soquete do SIM danificado. |
+| SIM bloqueado por PUK                       | 8        | `__[]__[]__[]__[]__[]__[]__[]__[]_______`Possíveis causas:1 - PUK do SIM foi acionado após múltiplas tentativas incorretas de PIN;2 - Necessário desbloqueio via operadora. |
+
+Observações
+
+- O padrão de piscadas segue um ciclo de 1 segundo por pulso.
+- Interpretação dos LEDs é essencial para diagnósticos em campo sem acesso remoto.
+- A nomenclatura LTE CAT M1 refere-se à tecnologia 4G para IoT (Internet das Coisas) e rastreamento veicular, com baixo consumo de energia e maior penetração de sinal em ambientes fechados.
+- Diagnósticos com base em piscadas tornam o processo acessível a instaladores e técnicos sem necessidade de software adicional.
