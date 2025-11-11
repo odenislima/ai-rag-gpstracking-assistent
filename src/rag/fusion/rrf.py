@@ -1,19 +1,6 @@
 from collections import defaultdict
 from ..types import ScoredDoc
 
-# def rrf(lists: list[list[ScoredDoc]], k_const: int = 60, limit: int | None = None) -> list[ScoredDoc]:
-#     agg = defaultdict(float)  # doc_id -> fused score
-#     best_rank = {}            # keep a representative rank
-#     for ranklist in lists:
-#         for d in ranklist:
-#             agg[d.doc_id] += 1.0 / (k_const + d.rank)
-#             best_rank[d.doc_id] = min(best_rank.get(d.doc_id, d.rank), d.rank)
-
-#     fused = [ScoredDoc(doc_id=doc, score=score, rank=best_rank[doc]) for doc, score in agg.items()]
-#     fused.sort(key=lambda x: x.score, reverse=True)
-
-#     return fused if limit is None else fused[:limit]
-
 def rrf(lists: list[list["ScoredDoc"]], k_const: int = 60, limit: int | None = None) -> list["ScoredDoc"]:
     # --- Before fusion ---
     # print("\n=== BEFORE FUSION ===")

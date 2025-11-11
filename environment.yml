@@ -1,4 +1,4 @@
-name: st4305rag
+name: ai-gpstrack-rag
 channels:
   - nvidia
   - pytorch
@@ -12,6 +12,8 @@ dependencies:
   - setuptools
   - wheel
 
+  - pyarrow
+  
   # Deep learning (GPU, CUDA 12.1)
   - pytorch=2.6.*
   - pytorch-cuda=12.1
@@ -48,6 +50,7 @@ dependencies:
   - nltk
   - spacy
   - lxml
+  - matplotlib
 
   # Web API
   - fastapi

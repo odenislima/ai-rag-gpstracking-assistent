@@ -40,7 +40,6 @@ class RAGPipeline:
     def __init__(
         self,
         retriever: Retriever,
-        #reranker: Reranker,
         embedder: Embedder,
         llm: LLM,
         doc_store: DocStore,
@@ -51,7 +50,6 @@ class RAGPipeline:
         meta_store=None, 
     ):
         self.retriever = retriever
-        #self.reranker = reranker
         self.embedder = embedder
         self.llm = llm
         self.doc_store = doc_store

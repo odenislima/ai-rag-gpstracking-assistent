@@ -32,9 +32,9 @@ class OllamaClient:
         payload = {"model": self.model,
                    "prompt": prompt, 
                    "stream": False, 
-                #    "options": {
-                #        "temperature": float(temperature)
-                #        },
+                    "options": {
+                        "temperature": float(temperature)
+                        },
                     "keep_alive": 0 
                     }
         r = requests.post(f"{self.base_url}/api/generate", json=payload, timeout=self.timeout)
@@ -47,7 +47,6 @@ class OllamaClient:
             "model": self.model,
             "prompt": user_prompt,
             "stream": False,
-            #"messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}],
             "messages": ([{"role": "system", "content": system_prompt}] if system_prompt else []) + [
                 {"role": "user", "content": user_prompt}
             ],

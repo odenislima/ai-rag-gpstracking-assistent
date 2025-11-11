@@ -33,7 +33,6 @@ class PromptBuilder:
         return (self.locale.SYSTEM_PROMPT or "").strip()
 
     def reformulate(self, query: str) -> str:
-        # NOTE: your REFORMULATE_PROMPT already has doubled braces {{ }} in the JSON example.
         # We only escape *user-provided* fields (query) to be safe.
         return self.locale.REFORMULATE_PROMPT.format(query=_fmt_safe(query)).strip()
 

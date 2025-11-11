@@ -1,4 +1,4 @@
-name: gps-rag-assistent
+name: ai-gpstrack-rag
 channels:
   - nvidia         # CUDA runtime para PyTorch
   - pytorch        # builds oficiais do PyTorch

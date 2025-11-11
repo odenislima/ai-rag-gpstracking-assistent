@@ -1,10 +1,10 @@
 # Minimal launcher for your FastAPI RAG service (Ollama + FAISS + BGE-M3)
-#source /home/sinedo/miniconda3/bin/activate st4305rag
+
 # Usage:
-#   ./scripts/run_api.sh
-#   PORT=9000 ./scripts/run_api.sh
-#   RELOAD=0 ./scripts/run_api.sh
-#   OLLAMA_MODEL=llama3:instruct ./scripts/run_api.sh
+#   ./startup/run_api.sh
+#   PORT=9000 ./startup/run_api.sh
+#   RELOAD=0 ./startup/run_api.sh
+#   OLLAMA_MODEL=llama3:instruct ./startup/run_api.sh
 
 set -euo pipefail
 

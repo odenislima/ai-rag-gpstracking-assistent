@@ -30,7 +30,7 @@ class BM25Retriever(Retriever):
         rag_log(f"[BM25Retriever] done | elapsed={time.time()-t0:.2f}s", flush=True)
         return result 
 
-    # NEW: many queries in one pass (BM25 isn’t vectorized, but looping here is still faster overall
+    # many queries in one pass (BM25 isn’t vectorized, but looping here is still faster overall
     # when combined with the batched dense path and fused downstream)
     def retrieve_many(self, queries: list[str], k: int) -> list[list[ScoredDoc]]:
         out: list[list[ScoredDoc]] = []
